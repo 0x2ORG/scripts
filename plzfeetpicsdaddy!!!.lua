@@ -13,7 +13,7 @@ Aiming.FOVSides = 25
 Aiming.HitChance = 400
 Aiming.ShowFOV = false
 end)
-Section:NewButton("Primes Streamable", "press k to toggel off or ON", function()
+Section:NewButton("Primes Streamable.gg/silentaim", "press k to toggel off or ON", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/primegotemdontworry/streamable/main/streams", true))()
 end)
 local Tab = Window:NewTab("Streamable camlock")
@@ -116,4 +116,7 @@ RunService.Heartbeat:Connect(function()
         end
     end)
 end)
+end)
+Section:NewKeybind("open close", "click to open or close", Enum.KeyCode.F, function()
+	Library:ToggleUI()
 end)
